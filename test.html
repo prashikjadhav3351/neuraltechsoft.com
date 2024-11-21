@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Submission</title>
+</head>
+
+<body>
+  <form id="myForm"
+    action="https://script.google.com/macros/s/AKfycbzaVC_IjASFNPOsARDWQR-FcH7HHQ2R2ofh6Kbs4YhfeH_z8CqYYr6sLLceNPofgA/exec"
+    method="POST" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+    <div class="form-group">  
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" required>
+    </div>
+    <div class="form-group">
+      <label for="resume">Upload Resume:</label>
+      <input type="file" id="resume" name="resume" required>
+    </div>
+    <div class="form-submit-container">
+      <button type="submit" class="form-submit">Submit</button>
+    </div>
+  </form>
+
+  <script>
+    document.getElementById("myForm").addEventListener("submit", function (event) {
+      event.preventDefault(); // Prevent default form submission
+
+      const formData = new FormData(this); // Create FormData object
+
+      fetch(this.action, {
+        method: "POST",
+        body: formData
+      })
+        .then(response => response.text())
+        .then(data => {
+          console.log(data); // Log the response from the server
+          alert(data); // Show an alert with the response
+        })
+        .catch(error => {
+          console.error("Error:", error);
+        });
+    });
+  </script>
+</body>
+
+</html>

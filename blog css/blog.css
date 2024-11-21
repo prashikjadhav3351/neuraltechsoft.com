@@ -1,0 +1,138 @@
+
+/* General Styles */
+.blog-container {
+max-width: 900px;
+margin: 0 auto;
+padding: 20px;
+background-color: #fff;
+font-family: 'Roboto', sans-serif;
+color: #333;
+line-height: 1.6;
+}
+
+/* Header Styles */
+.blog-container h1 {
+font-size: 2rem;
+font-weight: 700;
+color: #333;
+margin-bottom: 20px;
+}
+
+.blog-container h2 {
+font-size: 1.75rem;
+font-weight: 600;
+color: #555;
+margin-top: 25px;
+margin-bottom: 15px;
+}
+
+.blog-container h3 {
+font-size: 1.5rem;
+font-weight: 500;
+color: #2c3e50;
+margin-top: 20px;
+margin-bottom: 10px;
+}
+
+/* Paragraphs */
+.blog-container p {
+font-size: 1.1rem;
+color: #666;
+margin-bottom: 20px;
+text-align: justify;
+}
+
+/* Strong Text */
+.blog-container p strong {
+color: #2c3e50;
+font-weight: 600;
+}
+
+/* Lists */
+.blog-container ul {
+padding-left: 20px;
+}
+
+.blog-container ul li {
+font-size: 1.1rem;
+color: #666;
+margin-bottom: 10px;
+}
+
+.blog-container ul li strong {
+color: #2c3e50;
+font-weight: 600;
+}
+
+/* Section Spacing */
+.blog-container h1, .blog-container h2, .blog-container h3, .blog-container p, .blog-container ul {
+margin-left: 10px;
+margin-right: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+.blog-container {
+padding: 15px;
+}
+
+.blog-container h1 {
+font-size: 1.9rem;
+}
+
+.blog-container h2 {
+font-size: 1.6rem;
+}
+
+.blog-container h3 {
+font-size: 1.4rem;
+}
+
+.blog-container p {
+font-size: 1rem;
+}
+}
+
+@media (max-width: 768px) {
+.blog-container h1 {
+font-size: 1.7rem;
+}
+
+.blog-container h2 {
+font-size: 1.5rem;
+}
+
+.blog-container h3 {
+font-size: 1.3rem;
+}
+
+.blog-container p {
+font-size: 0.95rem;
+}
+
+.blog-container ul {
+padding-left: 15px;
+}
+}
+
+@media (max-width: 480px) {
+.blog-container {
+padding: 10px;
+}
+
+.blog-container h1 {
+font-size: 1.5rem;
+}
+
+.blog-container h2 {
+font-size: 1.4rem;
+}
+
+.blog-container h3 {
+font-size: 1.2rem;
+}
+
+.blog-container p {
+font-size: 0.9rem;
+}
+}
